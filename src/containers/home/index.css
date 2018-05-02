@@ -8,16 +8,117 @@
          border-color:transparent;
      }
  }
-h1 {
-      font:bold 200% Consolas,Monaco,monospace;
-      border-right:.1em solid;
-      width:16.5em;
-      /* fallback */
-      width:30ch;
-      /* # of chars */
-      margin:2em 1em;
-      white-space:nowrap;
-      overflow:hidden;
-      animation:typing 3s steps(30,end),/* # of steps = # of chars */
-      blink-caret .5s step-end infinite alternate;
-  }
+h1, h2, h3{
+    margin: 0 0;
+    border-right:.1em solid;
+    /* fallback */
+    width:10ch;
+    /* # of chars */
+    white-space:nowrap;
+    overflow:hidden;
+    animation:typing 1s steps(11,end),/* # of steps = # of chars */
+    blink-caret .5s step-end infinite alternate;
+}
+h1{
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 30px;
+}
+.stage{
+    perspective: 375px;
+    transform-style: preserve-3d;
+    z-index: 1;
+    position: relative;
+    height: 200px;
+}
+.content{
+    height: 200px;
+    background: cornflowerblue;
+    animation: .5s scaleContent ease;
+    animation-delay: 2s;
+    text-align: center;
+    line-height: 200px;
+}
+@keyframes scaleContent {
+    from {
+        transform: translateZ(0);
+    }
+    to {
+        transform: translateZ(100px);
+    }
+}
+.left,.right,.top,.bottom{
+    position: absolute;
+    z-index: 2;
+}
+.left{
+    width: 34%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: black;
+    transform-origin: left;
+    animation: 1.5s openLeft ease-in-out;
+}
+.right{
+    width: 34%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .8);
+    transform-origin: right;
+    animation: 1.5s openRight ease-in-out;
+}
+.top{
+    width: 32%;
+    height: 50%;
+    left: 50%;
+    margin-left: -16%;
+    top: 0;
+    background: rgba(255, 255, 255, .5);
+    transform-origin: top;
+    animation: 1.5s openTop ease-in-out;
+}
+.bottom{
+    width: 32%;
+    height: 50%;
+    left: 50%;
+    margin-left: -16%;
+    bottom: 0;
+    background: rgba(255, 255, 255, .7);
+    transform-origin: bottom;
+    animation: 1.5s openBottom ease-in-out;
+}
+@keyframes openLeft {
+    form {
+        transform: rotateY(-90deg);
+    }
+    to {
+        transform: rotateY(-180deg);
+    }
+}
+@keyframes openRight {
+    form {
+        transform: rotateY(90deg);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}
+@keyframes openTop {
+    form {
+        transform: rotateX(90deg);
+    }
+    to {
+        transform: rotateX(180deg);
+    }
+}
+@keyframes openBottom {
+    form {
+        transform: rotateX(-90deg);
+    }
+    to {
+        transform: rotateX(-180deg);
+    }
+}

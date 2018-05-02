@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "autoprefixer": "^8.4.1",
+    "postcss": "^6.0.22",
+    "postcss-plugin-px2rem": "^0.7.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4"
