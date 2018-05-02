@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import './index.css'
 export default class Home extends Component {
   render() {
     return (
       <div>
-        <Link to="/company">Home</Link>
+        <h1>你们都是傻逼 ...</h1>
       </div>
     )
   }
