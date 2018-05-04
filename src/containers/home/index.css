@@ -12,7 +12,7 @@ h1, h2, h3{
     margin: 0 0;
     border-right:.1em solid;
     /* fallback */
-    width:10ch;
+    width:15ch;
     /* # of chars */
     white-space:nowrap;
     overflow:hidden;
