@@ -193,7 +193,8 @@ module.exports = {
                         ident: 'postcss',
                         plugins: () => [
                           require('postcss-flexbugs-fixes'),
-                          autoprefixer({
+													require('postcss-plugin-px2rem')({rootValue: 75}),
+													autoprefixer({
                             browsers: [
                               '>1%',
                               'last 4 versions',

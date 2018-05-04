@@ -23,7 +23,7 @@ export default class Home extends Component {
       <div>
         <div className="stage" ref="stage">
           <div className="content">
-						<h1 style={!this.state.hasOpen?{display: 'none'}:{}}>哈哈哈哈 ...</h1>
+						<h1 style={!this.state.hasOpen?{display: 'none'}:{}}>今天是五四青年节</h1>
           </div>
           <div className="top" ref="top">
           </div>
