@@ -4,8 +4,8 @@ const path = require('path')
 var filePath = path.resolve()
 
 fs.readdir(filePath+'/public/', (err, files) => {
-	var name = [files.slice(2,3)[0], files.slice(3)[0]]
-
+	var name = [files.slice(0,1)[0], files.slice(3,4)[0],files.slice(4)[0]]
+  console.log(files)
   name.forEach((item , index) => {
 		var url = path.join(filePath+'/public/',name[index]),
 			  dest = path.join(filePath+'/build/', name[index])
