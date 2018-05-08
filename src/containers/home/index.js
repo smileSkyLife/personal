@@ -3,38 +3,48 @@ import React, { Component } from 'react'
 import './index.css'
 export default class Home extends Component {
   state = {
-    hasOpen: false
+    showName: false
   }
   componentDidMount(){
-		//this.refs.left.style.transform = "rotateY(-180deg)"
-		setTimeout( () => {
-			this.refs.left.style.transform = "rotateY(-180deg)"
-			this.refs.top.style.transform = "rotateX(180deg)"
-			this.refs.right.style.transform = "rotateY(180deg)"
-			this.refs.bottom.style.transform = "rotateX(-180deg)"
-      this.refs.stage.style.overflow = "hidden"
-			this.setState({
-				hasOpen: true
-			})
-    }, 1000)
+		Promise.resolve().then((resolve, reject) => {
+			var customBeziers = anime({
+				targets: '#customBezier .hi',
+				translateX: window.innerWidth/2+100-10,
+				easing: [.91,-0.54,.29,1.56]
+			});
+      customBeziers.complete = () => {
+        this.setState({
+          showName: true
+        })
+				var allCallbacks1 = anime({
+					targets: '#allCallbacks .first',
+					translateX: 200,
+					delay: function(el, i) { return 1000 + (i * 100); },
+					duration: function(el, i) { return 500 + (i * 500); }
+				});
+				var allCallbacks2 = anime({
+					targets: '#allCallbacks .second',
+					translateX: -180,
+					delay: function(el, i) { return 1000 + (i * 100); },
+					duration: function(el, i) { return 500 + (i * 500); }
+				});
+      }
+    })
   }
   render() {
     return (
-      <div>
-        <div className="stage" ref="stage">
-          <div className="content">
-						<h1 style={!this.state.hasOpen?{display: 'none'}:{}}>今天是五四青年节</h1>
+				<div id="customBezier">
+					<p className="hi">
+						Hi
+					</p>
+					<p className="content" style={this.state.showName?{opacity: 1}:{}}>
+						Zora
+					</p>
+					<div className="happy" id="allCallbacks" style={{color: "#ffffff"}}>
+            <p className="first">Happy</p>
+						<p className="second">BirthDay!</p>
           </div>
-          <div className="top" ref="top">
-          </div>
-					<div className="right" ref="right">
-					</div>
-					<div className="bottom" ref="bottom">
-					</div>
-					<div className="left" ref="left">
-					</div>
-        </div>
-      </div>
+				</div>
     )
   }
 }

@@ -48,13 +48,16 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "start": "cross-env NODE_ENV=dev webpack-dev-server --inline --progress --colors",
+    "build": "cross-env NODE_ENV=production webpack --config ./webpack.prod.config.js --progress --colors && node deploy/deploy.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
+    "html-loader": "^0.5.5",
+    "json-loader": "^0.5.7",
+    "optimize-css-assets-webpack-plugin": "^4.0.1",
     "react-router-dom": "^4.2.2"
   },
   "jest": {

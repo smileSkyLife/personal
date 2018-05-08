@@ -32,15 +32,36 @@ h1{
     position: relative;
     height: 400px;
 }
+.hi{
+    left: -100px;
+    position: relative;
+}
 .content{
-    height: 400px;
-    background: cornflowerblue;
-    background-image: url("../../assets/imgs/today.jpg");
-    background-size: cover;
-    animation: .5s scaleContent ease;
-    animation-delay: 2s;
     text-align: center;
-    line-height: 400px;
+    transition: all 1s;
+    opacity: 0;
+}
+.happy>p{
+    position: relative;
+    display: inline-block;
+}
+.happy>p:first-child{
+    left: -100px;
+}
+.happy>p:last-child{
+    right: -320px;
+}
+/*.content{*/
+    /*height: 400px;*/
+    /*background: cornflowerblue;*/
+    /*background-size: cover;*/
+    /*animation: .5s scaleContent ease;*/
+    /*animation-delay: 2s;*/
+    /*text-align: center;*/
+    /*line-height: 400px;*/
+/*}*/
+p{
+    color: #ffffff;
 }
 @keyframes scaleContent {
     from {

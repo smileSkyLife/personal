@@ -1,5 +1,20 @@
+html,body{
+  height: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  position: relative;
+  background: black;
 }
+.fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
