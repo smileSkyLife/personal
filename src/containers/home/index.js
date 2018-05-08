@@ -18,13 +18,13 @@ export default class Home extends Component {
         })
 				var allCallbacks1 = anime({
 					targets: '#allCallbacks .first',
-					translateX: 200,
+					translateX: window.innerWidth/2+15,
 					delay: function(el, i) { return 1000 + (i * 100); },
 					duration: function(el, i) { return 500 + (i * 500); }
 				});
 				var allCallbacks2 = anime({
 					targets: '#allCallbacks .second',
-					translateX: -180,
+					translateX: -window.innerWidth/2-15,
 					delay: function(el, i) { return 1000 + (i * 100); },
 					duration: function(el, i) { return 500 + (i * 500); }
 				});
