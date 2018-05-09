@@ -7,8 +7,7 @@ const Company = asyncComponent(() => import('../containers/company/index'))
 
 class Routers extends Component{
   render(){
-    return (<div>
-        <Router basename='/' >
+    return (<Router basename='/' >
           <div>
             <Switch>
               <Redirect exact={true} from='/' to='/home' />
@@ -17,7 +16,6 @@ class Routers extends Component{
             <Route path='/company' component={Company}/>
           </div>
         </Router>
-      </div>
     )
   }
 }

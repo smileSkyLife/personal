@@ -25,5 +25,13 @@
     <div id="root"></div>
     <script rel="script" src="http://animejs.com/anime.min.js"></script>
     <script rel="script" src="%PUBLIC_URL%/fireworks.js"></script>
+    <script>
+        var canvas = document.getElementsByClassName('fireworks')[0]
+        window.onhashchange = function(state){
+          if(window.location.hash === '#/home'){
+            canvas.style.display = 'none'
+          }
+        }
+    </script>
   </body>
 </html>

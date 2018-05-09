@@ -1,147 +1,58 @@
-@keyframes typing {
-    from {
-        width:0;
-    }
+body{
+	background: black;
+}
+.home{
+	padding: 10px;
+}
+p{
+	color: #ffffff;
+	margin: 10px;
+	font-size: 18px;
+	font-family: "Microsoft Sans Serif";
+	font-style: italic;
+  white-space: pre-wrap;
+}
+p.header,.content p,p.footer{
+	display: inline-block;
+	position: relative;
+}
+p.header{
+	color: paleturquoise;
+}
+p.header{
+	color: papayawhip;
+}
+.content p{
+	padding-right: 6px;
+	text-indent: 2em;
+	word-break: break-all;
+	color: green;
+	font-family: '微软雅黑';
+	line-height: 1.8em;
+	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(paleturquoise), to(palevioletred));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+p.footer::after{
+	content: '';
+	clear: both;
+}
+.inserting::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: -.8em;
+	width: .8em;
+	height: 2px;
+	background-color: #ffffff;
+	animation: blink-caret .5s step-end infinite alternate;
+}
+span.inserting{
+	display: inline-block;
+	position: relative;
 }
 @keyframes blink-caret {
-     50% {
-         border-color:transparent;
-     }
- }
-h1, h2, h3{
-    margin: 0 0;
-    border-right:.1em solid;
-    /* fallback */
-    width:15ch;
-    /* # of chars */
-    white-space:nowrap;
-    overflow:hidden;
-    animation:typing 1s steps(11,end),/* # of steps = # of chars */
-    blink-caret .5s step-end infinite alternate;
-}
-h1{
-    font-size: 48px;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 60px;
-}
-.stage{
-    perspective: 750px;
-    transform-style: preserve-3d;
-    z-index: 1;
-    position: relative;
-    height: 400px;
-}
-.hi{
-    left: -100px;
-    position: relative;
-}
-.content{
-    text-align: center;
-    transition: all 1s;
-    opacity: 0;
-}
-.happy>p{
-    position: relative;
-    display: inline-block;
-}
-.happy>p:first-child{
-    left: -100px;
-}
-.happy>p:last-child{
-    right: -320px;
-}
-/*.content{*/
-    /*height: 400px;*/
-    /*background: cornflowerblue;*/
-    /*background-size: cover;*/
-    /*animation: .5s scaleContent ease;*/
-    /*animation-delay: 2s;*/
-    /*text-align: center;*/
-    /*line-height: 400px;*/
-/*}*/
-p{
-    color: #ffffff;
-}
-@keyframes scaleContent {
-    from {
-        transform: translateZ(0);
-    }
-    to {
-        transform: translateZ(-200px);
-    }
-}
-.left,.right,.top,.bottom{
-    position: absolute;
-    z-index: 2;
-}
-.left{
-    width: 34%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: black;
-    transform-origin: left;
-    animation: 1.5s openLeft ease-in-out;
-}
-.right{
-    width: 34%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    background: rgba(0, 0, 0, .8);
-    transform-origin: right;
-    animation: 1.5s openRight ease-in-out;
-}
-.top{
-    width: 32%;
-    height: 50%;
-    left: 50%;
-    margin-left: -16%;
-    top: 0;
-    background: rgba(255, 255, 255, .5);
-    transform-origin: top;
-    animation: 1.5s openTop ease-in-out;
-}
-.bottom{
-    width: 32%;
-    height: 50%;
-    left: 50%;
-    margin-left: -16%;
-    bottom: 0;
-    background: rgba(255, 255, 255, .7);
-    transform-origin: bottom;
-    animation: 1.5s openBottom ease-in-out;
-}
-@keyframes openLeft {
-    form {
-        transform: rotateY(-90deg);
-    }
-    to {
-        transform: rotateY(-180deg);
-    }
-}
-@keyframes openRight {
-    form {
-        transform: rotateY(90deg);
-    }
-    to {
-        transform: rotateY(180deg);
-    }
-}
-@keyframes openTop {
-    form {
-        transform: rotateX(90deg);
-    }
-    to {
-        transform: rotateX(180deg);
-    }
-}
-@keyframes openBottom {
-    form {
-        transform: rotateX(-90deg);
-    }
-    to {
-        transform: rotateX(-180deg);
-    }
+	50%{
+		background: #000;
+	}
 }
