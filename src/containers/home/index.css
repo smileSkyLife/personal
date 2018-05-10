@@ -22,9 +22,9 @@ p.header{
 p.header{
 	color: papayawhip;
 }
-.content p{
+.content p, .footer{
 	padding-right: 6px;
-	text-indent: 2em;
+	padding-left: 2em;
 	word-break: break-all;
 	color: green;
 	font-family: '微软雅黑';
@@ -32,6 +32,10 @@ p.header{
 	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(paleturquoise), to(palevioletred));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+.footer{
+	background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(antiquewhite), to(azure));
+	padding-left: 0;
 }
 p.footer::after{
 	content: '';

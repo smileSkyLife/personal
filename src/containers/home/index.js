@@ -8,9 +8,13 @@ export default class Home extends Component {
 		footer: "",
 		num: 0,
 		text: {
-			header: "Hi, xxxx",
-			content: "深入学习一个框架最直接的方式，就是弄明白框架的原理。React无疑是一个非常值得学习其原理的框架，它设计简单，没有引入任何新的概念，一个组件就是一个方法或一个类。",
-			footer: "Best Regards!"
+			header: "爽, ^ - ^",
+			content: "愿你的快乐与岁月无关,\n" +
+			"愿你的纯真与经历无关。\n" +
+			"沧海桑田后依旧乘风破浪,\n" +
+			"尘埃落定后依旧炙热欢畅。\n"+
+			'好吧,说正经的,祝周爽同志25岁生日快乐！',
+			footer: "Best Wishes!"
 		}
 	}
   componentDidMount(){
